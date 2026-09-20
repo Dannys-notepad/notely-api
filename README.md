@@ -1,0 +1,91 @@
+# Notely: Note Taking API
+
+**Btechiefied BD Group 4A Capstone Project**
+
+A CRUD note taking API. 
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [API Endpoints](#api-endpoints)
+- [Collaborators](#collaborators)
+- [Changelog](#changelog)
+
+## Overview
+
+A CRUD API that allows users to to create, retrieve, update, and delete text notes, with data persistency.
+
+## Tech Stack
+
+- Node.js / Express.js
+
+
+## Getting Started
+
+```bash
+# 1. Clone the repo
+git clone "https://github.com/Dannys-notepad/notely-api"
+cd notely-api
+
+# 2. Install dependencies
+npm install
+
+# 3. Set up environment variables
+cp .env.example .env
+
+# 4. Run the server
+npm start
+Note: in development run `npm run dev` instead
+```
+
+## API Endpoints
+
+| Method | Endpoint      | Description        |
+|--------|---------------|---------------------|
+| POST   | `/notes`      | Create a note       |
+| GET    | `/notes`      | Get all notes       |
+| GET    | `/notes/:id`  | Get a single note   |
+| PUT    | `/notes/:id`  | Update a note       |
+| DELETE | `/notes/:id`  | Delete a note       |
+
+
+## Collaborators
+
+| Name              | ID Number         | Role / Area |
+|------             |-----------        |-------------|
+|   Etim Daniel     |      BD26090106   |             |
+|                   |                   |             |
+|                   |                   |             |
+|                   |                   |             |
+
+## Changelog
+
+> Every contributor adds a new entry here **each time** they push a change, even small ones. This gives the whole team a readable history of who did what, without needing to dig through `git log`.
+>
+> **Format:**
+> - Newest entry goes at the **top**.
+> - Bump the version number (e.g. `v1.0.0` → `v1.0.1` for a small change, `v1.1.0` for a new feature, `v2.0.0` for a breaking change).
+> - Fill in the date, what you worked on, your name, and your ID number.
+
+---
+
+### `v0.1.0` — 2026-09-20
+**Changes:** Initial project setup, repo structure, package.json, base server file, request logger middleware, and health check endpoint.
+**Name: Etim Daniel**  ---
+**ID Number: BD26090106**
+
+
+---
+
+<!--
+Copy the block below for every new change and paste it directly under this line,
+above the most recent entry, so the newest is always on top.
+
+### `vX.X.X` — YYYY-MM-DD
+**Changes:**
+**Name:** ---
+**ID Number:**
+---
+-->

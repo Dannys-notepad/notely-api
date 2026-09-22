@@ -1,11 +1,11 @@
-import express from 'express'
-import helmet from 'helmet'
-import cors from 'cors'
+const express = require('express')
+const helmet = require('helmet')
+const cors = require('cors')
 
 // middleware imports
-import logRequests from './middlewares/requestLogger.middleware.js'
+const logRequests = require('./middlewares/requestLogger.middleware.js')
 
-import noteRoute from './route/note.route.js'
+const noteRoute = require('./route/note.route.js')
 
 const app = express()
 
@@ -25,4 +25,4 @@ app.use('/', async (req, res) => {
 // API route
 app.use('/api/v1/notes', noteRoute)
 
-export default app
+module.exports = app

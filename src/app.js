@@ -4,6 +4,7 @@ const cors = require('cors')
 
 // middleware imports
 const logRequests = require('./middlewares/requestLogger.middleware.js')
+const errorHandler = require('./middlewares/errorHandler.middleware.js')
 
 const noteRoute = require('./route/note.route.js')
 
@@ -24,5 +25,12 @@ app.use('/', async (req, res) => {
 
 // API route
 app.use('/api/v1/notes', noteRoute)
+
+
+/**
+ * Error handler should be and remain the last middleware
+ * to obey the middleware Hierarchy rule.
+ */
+app.use(errorHandler)
 
 module.exports = app

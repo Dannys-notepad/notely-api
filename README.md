@@ -98,6 +98,13 @@ Note: in development run `npm run dev` instead
 
 ---
 
+### `v0.3.` — 2026-09-23
+**Changes:** Tested note repository with vitest, added a markdown file documentation for use explanation. Fixed some typos and wrong path reference. Added error handler middleware (tested and working properly).
+**Name: Etim Daniel**  ---
+**ID Number: BD26090106**
+
+---
+
 ### `v0.2.0` — 2026-09-22
 **Changes:** Moved codebase from ESM syntax to CommonJS syntax, database setup, repository setup and repository test setup. Note: repository has not been tested yet.
 **Name: Etim Daniel**  ---

@@ -8,4 +8,4 @@ async function logRequests (req, res, next) {
     next()
 }
 
-export default logRequests
+module.exports = logRequests

@@ -95,6 +95,8 @@ Note: in development run `npm run dev` instead
 > - Newest entry goes at the **top**.
 > - Bump the version number (e.g. `v1.0.0` → `v1.0.1` for a small change, `v1.1.0` for a new feature, `v2.0.0` for a breaking change).
 > - Fill in the date, what you worked on, your name, and your ID number.
+### `v0.4.0` — 2026-09-26
+**Changes:** Added validation middleware to check that note title and content are provided, and added tests for the validation middleware. **Name:** Alpha Peace — **ID Number:** BD26090310
 
 ---
 

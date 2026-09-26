@@ -19,7 +19,7 @@ app.use(cors())
 // custom moddlewares
 app.use(logRequests)
 
-app.use('/', async (req, res) => {
+app.get('/', (req, res) => {
     res.json({ status: 'OK' })
 })
 

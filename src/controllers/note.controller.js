@@ -38,6 +38,20 @@ function getNoteById(req, res, next) {
     }
 }
 
+function deleteNote(req, res, next) {
+    try {
+        const deleted = notesStore.remove(req.params.id)
+
+        if (!deleted) {
+            return response(res, 'Note not found', {}, 404)
+        }
+
+        return response(res, 'Note deleted successfully', {})
+    } catch (error) {
+        next(error)
+    }
+}
+
 module.exports = {
     noteHealthRoute,
     getAllNotes,

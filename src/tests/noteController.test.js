@@ -4,7 +4,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const { db } = require("../db/database.js");
 const { createNotesStore } = require("../db/repository/note.repo.js");
-const { getAllNotes, getNoteById } = require("../controllers/note.controller.js");
+const { getAllNotes, getNoteById, deleteNote } = require("../controllers/note.controller.js");
 
 const notesStore = createNotesStore(db);
 

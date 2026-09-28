@@ -55,5 +55,6 @@ function deleteNote(req, res, next) {
 module.exports = {
     noteHealthRoute,
     getAllNotes,
-    getNoteById
+    getNoteById,
+    deleteNote
 }

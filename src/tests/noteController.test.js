@@ -69,4 +69,16 @@ describe("GET Note Controllers", () => {
     expect(res.statusCode).toBe(404);
     expect(res.body.message).toBe("Note not found");
   });
+
+it("deleteNote deletes note with status 200 when note exists", async () => {
+    const req = { params: { id: createdNote.id } };
+    const res = createMockRes();
+    const next = () => { };
+
+    await deleteNote(req, res, next);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body.message).toBe("Note deleted successfully");
+    expect(notesStore.getById(createdNote.id)).toBeUndefined();
+  });
 });

@@ -6,5 +6,6 @@ const router = Router()
 router.get('/health', controller.noteHealthRoute)
 router.get('/', controller.getAllNotes)
 router.get('/:id', controller.getNoteById)
+router.delete('/:id', controller.deleteNote)
 
 module.exports = router

@@ -32,8 +32,8 @@ function createNotesStore(db) {
       const existing = this.getById(id);
       if (!existing) return null;
 
-      const newTitle = title || existing.title;
-      const newContent = content || existing.content;
+      const newTitle = title ?? existing.title;
+      const newContent = content ?? existing.content;
       const now = new Date().toISOString();
 
       db.prepare(`

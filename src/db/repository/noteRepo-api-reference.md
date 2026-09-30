@@ -3,7 +3,10 @@
 ## Import
 
 ```js
-const notesStore = require("../db/repository/note.repo");
+const { db } = require("../db/database");
+const { createNotesStore } = require("../db/repository/note.repo");
+
+const notesStore = createNotesStore(db);
 ```
 
 ## Methods
@@ -24,7 +27,7 @@ Gets a single note.
 - **Returns:** the note, or `undefined` if not found
 
 ### `update(id, title, content)`
-Updates a note. Pass `null` for `title` or `content` to leave it unchanged.
+Updates a note. Pass `null` for `title` or `content` to leave that field unchanged.
 - **Parameters:** `id` (string), `title` (string or null), `content` (string or null)
 - **Returns:** the updated note, or `null` if not found
 

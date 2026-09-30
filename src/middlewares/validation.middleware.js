@@ -1,13 +1,18 @@
 function validateNote(req, res, next) {
-  const { title, content } = req.body || {}
+  const { title, content } = req.body || {};
 
-  if (!title || !content) {
-    const error = new Error('Title and content are required')
-    error.status = 400
-    return next(error)
+  if (
+    typeof title !== 'string' ||
+    typeof content !== 'string' ||
+    title.trim().length === 0 ||
+    content.trim().length === 0
+  ) {
+    const error = new Error('Title and content must be non-empty strings');
+    error.status = 400;
+    return next(error);
   }
 
-  next()
+  return next();
 }
 
-module.exports = validateNote
+module.exports = validateNote;

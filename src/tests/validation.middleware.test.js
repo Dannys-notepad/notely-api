@@ -35,7 +35,7 @@ describe("validateNote middleware", () => {
 
     expect(next).toHaveBeenCalledWith(
       expect.objectContaining({
-        message: "Title and content are required",
+        message: "Title and content must be non-empty strings",
         status: 400
       })
     );
@@ -55,7 +55,7 @@ describe("validateNote middleware", () => {
 
     expect(next).toHaveBeenCalledWith(
       expect.objectContaining({
-        message: "Title and content are required",
+        message: "Title and content must be non-empty strings",
         status: 400
       })
     );
@@ -70,7 +70,26 @@ describe("validateNote middleware", () => {
 
     expect(next).toHaveBeenCalledWith(
       expect.objectContaining({
-        message: "Title and content are required",
+        message: "Title and content must be non-empty strings",
+        status: 400
+      })
+    );
+  });
+
+  it("rejects blank or non-string fields", () => {
+    const req = {
+      body: {
+        title: "   ",
+        content: 42
+      }
+    };
+    const next = vi.fn();
+
+    validateNote(req, {}, next);
+
+    expect(next).toHaveBeenCalledWith(
+      expect.objectContaining({
+        message: "Title and content must be non-empty strings",
         status: 400
       })
     );

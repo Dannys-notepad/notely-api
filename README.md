@@ -10,12 +10,13 @@ A CRUD note taking API.
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [API Endpoints](#api-endpoints)
+- [API Documentation](#api-documentation)
 - [Collaborators](#collaborators)
 - [Changelog](#changelog)
 
 ## Overview
 
-A CRUD API that allows users to to create, retrieve, update, and delete text notes, with data persistency.
+A CRUD API that allows users to create, retrieve, update, and delete text notes with SQLite persistence.
 
 ## Tech Stack
 
@@ -44,13 +45,18 @@ Note: in development run `npm run dev` instead
 
 ## API Endpoints
 
-| Method | Endpoint      | Description        |
-|--------|---------------|---------------------|
-| POST   | `/notes`      | Create a note       |
-| GET    | `/notes`      | Get all notes       |
-| GET    | `/notes/:id`  | Get a single note   |
-| PUT    | `/notes/:id`  | Update a note       |
-| DELETE | `/notes/:id`  | Delete a note       |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/notes/health` | Notes API health check |
+| POST | `/api/v1/notes` | Create a note |
+| GET | `/api/v1/notes` | Get all notes |
+| GET | `/api/v1/notes/:id` | Get one note |
+| PUT | `/api/v1/notes/:id` | Replace a note's title and content |
+| DELETE | `/api/v1/notes/:id` | Delete a note |
+
+## API Documentation
+
+See [API.md](API.md) for request and response schemas, examples, validation rules, status codes, and error behavior.
 
 
 ## Collaborators
@@ -95,6 +101,13 @@ Note: in development run `npm run dev` instead
 > - Newest entry goes at the **top**.
 > - Bump the version number (e.g. `v1.0.0` → `v1.0.1` for a small change, `v1.1.0` for a new feature, `v2.0.0` for a breaking change).
 > - Fill in the date, what you worked on, your name, and your ID number.
+### `v0.6.0` — 2026-09-29
+**Changes:** Completed POST and PUT note endpoints, applied shared request validation, added HTTP route coverage, standardized API error responses, and documented the API in [API.md](API.md).
+**Name: Etim Daniel**  ---
+**ID Number: BD26090106**
+
+---
+
 ### `v0.5.0` — 2026-09-29
 **Changes:** Added DELETE note controller, DELETE controller test, and DELETE note route. 
 **Name: Alpha Peace**  --- 
@@ -109,7 +122,7 @@ Note: in development run `npm run dev` instead
 
 ---
 
-### `v0.3.` — 2026-09-23
+### `v0.3.0` — 2026-09-23
 **Changes:** Tested note repository with vitest, added a markdown file documentation for use explanation. Fixed some typos and wrong path reference. Added error handler middleware (tested and working properly).
 **Name: Etim Daniel**  ---
 **ID Number: BD26090106**

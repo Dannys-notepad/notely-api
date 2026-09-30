@@ -1,10 +1,17 @@
 function errorHandler(err, req, res, next) {
-    console.log(err.stack)
+    if (res.headersSent) {
+        return next(err);
+    }
 
-    const status = err.status || 500
-    const message = err.message || 'Internal Server Error'
+    console.error(err.stack || err);
 
-    res.status(status).json({ error: message })
+    const candidateStatus = err.status || err.statusCode;
+    const status = Number.isInteger(candidateStatus) && candidateStatus >= 400 && candidateStatus <= 599
+        ? candidateStatus
+        : 500;
+    const message = status >= 500 ? 'Internal Server Error' : err.message;
+
+    return res.status(status).json({ message, details: {} });
 }
 
-module.exports = errorHandler
+module.exports = errorHandler;

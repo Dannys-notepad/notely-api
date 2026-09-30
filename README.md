@@ -65,32 +65,7 @@ See [API.md](API.md) for request and response schemas, examples, validation rule
 |-----------------------------|-------------|-------------|
 | Etim Daniel                 | BD26090106  |             |
 | Bashirat Abdulganiyu        | BD26090703  |             |
-| Edward Selasi Torsu         | DM26091285  |             |
-| Kamolideen Gbenle           | BD26090549  |             |
-| Oluwasegun Babatunde        |             |             |
-| Taiwo Adepoju               |             |             |
-| Agupusi Peace               | BD26090843  |             |
-| Chinwuba Onyeka Success     | BD26076031  |             |
-| Eniola Onaolapo             |             |             |
-| George Eipa                 | BD26090205  |             |
-| Ibrahim Adebowale           | BD26090596  |             |
-| Destiny Favour              |             |             |
-| Richard Nkansah             |             |             |
-| Samuel Coker                | BD26090107  |             |
-| Divine Ndudim                |             |             |
-| Khadijat Ishaq Muhammad     | BD26090109  |             |
-| Silvester Nyinge            |             |             |
-| Omachile Basil Ojotule      |             |             |
-| John Adisa                  |             |             |
-| Esther Ayeni                | BD26090793  |             |
-| Abraham Bobson Turay        | BD26090563  |             |
-| Erica Boakyewaa Aboagye     |             |             |
-| Morayooluwa Ajao            | BD26090681  |             |
-| Veronnicah Karogo           | BD26090895  |             |
-| Raphael Afolayan            |             |             |
-| Kondwani Mbewe              | BD26090778  |             |
-| Abdulsobur Abdulrasheed     |             |             |
-| Ellis Greene                |             |             |
+| Kamolideen Gbenle           | BD26090546  |             |     
 | Alpha Peace                 | BD26090310  |             |
 
 ## Changelog
@@ -101,24 +76,40 @@ See [API.md](API.md) for request and response schemas, examples, validation rule
 > - Newest entry goes at the **top**.
 > - Bump the version number (e.g. `v1.0.0` → `v1.0.1` for a small change, `v1.1.0` for a new feature, `v2.0.0` for a breaking change).
 > - Fill in the date, what you worked on, your name, and your ID number.
-### `v0.6.0` — 2026-09-29
+
+
+### `v0.8.0` — 2026-09-30
+**Changes:** Added error handler middleware 
+**Name: Abdulganiyu Bashirat**  ---
+**ID Number: BD26090703**
+
+---
+
+###  `v0.7.0` — 2026-09-29
 **Changes:** Completed POST and PUT note endpoints, applied shared request validation, added HTTP route coverage, standardized API error responses, and documented the API in [API.md](API.md).
 **Name: Etim Daniel**  ---
 **ID Number: BD26090106**
 
 ---
 
-### `v0.5.0` — 2026-09-29
+### `v0.6.0` — 2026-09-29
 **Changes:** Added DELETE note controller, DELETE controller test, and DELETE note route. 
 **Name: Alpha Peace**  --- 
 **ID Number: BD26090310**
 
 ---
 
-### `v0.4.0` — 2026-09-26
+### `v0.5.0` — 2026-09-26
 **Changes:** Added validation middleware to check that note title and content are provided, and added tests for the validation middleware. 
 **Name: Alpha Peace**  ---
 **ID Number: BD26090310**
+
+---
+
+### `V.4.0` — 2026-09-24
+**Changes:** Created the get routes: /api/v1/notes and /api/v1/notes/:id, and their respective controller
+**Name: Kamolideen Gbenle**
+**ID Number: BD26090549**
 
 ---
 

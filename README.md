@@ -77,6 +77,12 @@ See [API.md](API.md) for request and response schemas, examples, validation rule
 > - Bump the version number (e.g. `v1.0.0` → `v1.0.1` for a small change, `v1.1.0` for a new feature, `v2.0.0` for a breaking change).
 > - Fill in the date, what you worked on, your name, and your ID number.
 
+### `v1.0.0` — 2026-09-30
+**Changes:** Corrected the 404 middleware, from throw an error, to returning a 404 response.
+**Name: Etim Daniel**  ---
+**ID Number: BD26090106**
+
+---
 
 ### `v0.8.0` — 2026-09-30
 **Changes:** Added error handler middleware 

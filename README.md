@@ -78,7 +78,7 @@ See [API.md](API.md) for request and response schemas, examples, validation rule
 > - Fill in the date, what you worked on, your name, and your ID number.
 
 ### `v1.0.0` — 2026-09-30
-**Changes:** Corrected the 404 middleware, from throw an error, to returning a 404 response.
+**Changes:** Corrected the 404 middleware, from throw an error, to returning a 404 response. Add Notely API documentation in Postman collection format.
 **Name: Etim Daniel**  ---
 **ID Number: BD26090106**
 
